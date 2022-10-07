@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Library Project</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="mainGrid">
+      <div class="header">
+        <h1>My Library</h1>
+      </div>
+      <div class="sidebar">
+        <button id="libraryButton">Show Library</button>
+        <button id="addButton">Add A Book</button>
+        <button id="delete">Test Delete</button>
+      </div>
+      <div class="cardGrid" id="cardGrid">
+      </div>
+    </div>
+    <div class="bookForm">
+      <div class="form hidden" id="form">
+        <p class="details">Enter details below</p>
+        <label for="titleField" class="label" id="labelTitle">Title:</label>
+        <input type="text" class="input fields red" id="titleField" required placeholder="Title">
+        <label for="authorField" class="label" id="labelAuthor">Author:</label>
+        <input type="text" class="input fields red" id="authorField" required placeholder="Author">
+        <label for="pagesField" class="label" id="labelPages">Pages:</label>
+        <input type="number" class="input fields red" id="pagesField" required placeholder="Number of pages">
+        <label for="readField" class="label" id="labelRead">Read?:</label>
+        <input type="checkbox" class="checkbox" id="readValue">
+        <button id="submitButton">Add book to library</button>
+      </div>
+    </div>
+  </body>
+
+  <script src="./js/script.js"></script>
+</html>
