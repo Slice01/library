@@ -1,5 +1,4 @@
 let myLibrary = [];
-let testVar
 const libraryButton = document.getElementById('libraryButton');
 const addButton = document.getElementById('addButton');
 const submitButton = document.getElementById('submitButton');
