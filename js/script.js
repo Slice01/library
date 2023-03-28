@@ -5,20 +5,29 @@ const submitButton = document.getElementById('submitButton');
 const fields = document.querySelectorAll('.fields');
 const dlt = document.getElementById('delete');
 
-function book(title, author, pages, read) {
+class book {
+    constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    };
+};
+
+/*function book(title, author, pages, read) {
     // the constructor
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
-}
+}*/
 
 function addBookToLibrary() {
     const newBookTitle = document.getElementById('titleField');
-    let bookTitleRepeated;
-    let bookAuthorRepeated;
     const newBookAuthor = document.getElementById('authorField');
     const newBookPages = document.getElementById('pagesField');
+    let bookTitleRepeated;
+    let bookAuthorRepeated;
     let newBookRead = document.getElementById('readValue');
     const form = document.getElementById('form');
     
