@@ -5,6 +5,7 @@ const submitButton = document.getElementById('submitButton');
 const fields = document.querySelectorAll('.fields');
 const dlt = document.getElementById('delete');
 
+//Book constructor
 class book {
     constructor(title, author, pages, read) {
     this.title = title;
@@ -14,6 +15,7 @@ class book {
     };
 };
 
+//New book form submission
 function addBookToLibrary() {
     const newBookTitle = document.getElementById('titleField');
     const newBookAuthor = document.getElementById('authorField');
@@ -66,6 +68,7 @@ function addBookToLibrary() {
     };
 };
 
+//Form validation
 function validateBook() {
     if (this.value === '') {
         this.classList.add('red');
@@ -74,6 +77,7 @@ function validateBook() {
     }
 };
 
+//Create cards for all items currently in the library
 function showLibrary() {
     const cards = document.getElementsByClassName('card');      //Delete Old Cards
     for (let i = 0; i < cards.length; i) {
@@ -131,11 +135,13 @@ function showLibrary() {
     deleteButtons.forEach(btn => btn.addEventListener('click', deleteCard))
 };
 
+//Show form for book submission
 function showHidden() {
     const form = document.getElementById('form');
     form.classList.remove('hidden');
 }
 
+//Update object's read property
 function updateRead() {
     const currentRead = this.previousElementSibling;
     const currentTitle = this.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
@@ -153,6 +159,7 @@ function updateRead() {
     };
 };
 
+//Remove book from library
 function deleteCard() {
     const card = this.parentElement;
     const bookTitle = this.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.textContent;
